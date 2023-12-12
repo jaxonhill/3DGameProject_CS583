@@ -318,11 +318,11 @@ Terrain:
   m_Enabled: 1
   serializedVersion: 6
   m_TerrainData: {fileID: 15600000, guid: a436ceda6ad2147469df5ca68320d019, type: 2}
-  m_TreeDistance: 528
-  m_TreeBillboardDistance: 2000
+  m_TreeDistance: 179
+  m_TreeBillboardDistance: 130
   m_TreeCrossFadeLength: 5
   m_TreeMaximumFullLODCount: 50
-  m_DetailObjectDistance: 60
+  m_DetailObjectDistance: 5
   m_DetailObjectDensity: 1
   m_HeightmapPixelError: 5
   m_SplatMapDistance: 1000
