@@ -1,13 +1,11 @@
 public class Quest
 {
-    public int currentAmountCollected;
-    public int totalAmountNeeded;
     public string questTitle;
+    public bool isCompleted;
 
-    public Quest(int totalAmountNeeded, string questTitle, int currentAmountCollected = 0)
+    public Quest(string questTitle, bool isCompleted = false)
     {
-        this.currentAmountCollected = currentAmountCollected;
-        this.totalAmountNeeded = totalAmountNeeded;
         this.questTitle = questTitle;
+        this.isCompleted = isCompleted;
     }
 }
