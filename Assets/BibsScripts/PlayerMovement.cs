@@ -20,6 +20,11 @@ public class PlayerMovement : MonoBehaviour
     public KeyCode jumpKey = KeyCode.Space;
     public KeyCode sprintKey = KeyCode.LeftShift;
 
+    [Header("Dash")]
+    public bool dashing = false;
+    public float maxYSpeed;
+    public float dashSpeed;
+
     [Header("Ground Check")]
 
     public float playerHeight;
@@ -46,6 +51,7 @@ public class PlayerMovement : MonoBehaviour
     {
         walking,
         sprinting,
+        dashing,
         air
     }
 
@@ -67,7 +73,9 @@ public class PlayerMovement : MonoBehaviour
         StateHandler();
 
         // handle drag
-        if (grounded)
+        if (state == MovementState.dashing)
+            rb.drag = 0;
+        else if (grounded)
             rb.drag = groundDrag;
         else
             rb.drag = 0;
@@ -151,7 +159,12 @@ public class PlayerMovement : MonoBehaviour
     }
     public void StateHandler()
     {
-        if (grounded && Input.GetKey(sprintKey))
+        if (dashing)
+        {
+            state = MovementState.dashing;
+            moveSpeed = dashSpeed;
+        }
+        else if (grounded && Input.GetKey(sprintKey))
         {
             state = MovementState.sprinting;
             moveSpeed = sprintSpeed;
