@@ -11,6 +11,9 @@ public class MainMenu : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 
+        StaticStats.Health = 3;
+        StaticStats.currentQuestIndex = 0;
+
         SceneManager.LoadScene("_Home_Village");
     }
 
