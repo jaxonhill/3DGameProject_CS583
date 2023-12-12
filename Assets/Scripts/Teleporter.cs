@@ -9,10 +9,8 @@ public class Teleporter : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("COLLISION!");
         if (collision.gameObject.tag == "Player")
         {
-            Debug.Log("Player.");
             SceneManager.LoadScene(sceneName);
         }
     }

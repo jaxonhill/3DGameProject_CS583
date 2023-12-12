@@ -41,11 +41,14 @@ public class Dashing : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(1))
-            Dash();
+        if (!PauseMenu.isPaused) 
+        { 
+            if (Input.GetMouseButtonDown(1))
+                Dash();
 
-        if (dashCdTimer > 0)
-            dashCdTimer -= Time.deltaTime;
+            if (dashCdTimer > 0)
+                dashCdTimer -= Time.deltaTime;
+        }
     }
 
     private void Dash()

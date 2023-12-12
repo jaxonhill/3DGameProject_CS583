@@ -65,25 +65,31 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        // ground check
-        grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.1f, whatIsGround); //used to be .3f
+        if (!PauseMenu.isPaused)
+        {
+            // ground check
+            grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.1f, whatIsGround); //used to be .3f
 
-        MyInput();
-        SpeedControl();
-        StateHandler();
+            MyInput();
+            SpeedControl();
+            StateHandler();
 
-        // handle drag
-        if (state == MovementState.dashing)
-            rb.drag = 0;
-        else if (grounded)
-            rb.drag = groundDrag;
-        else
-            rb.drag = 0;
+            // handle drag
+            if (state == MovementState.dashing)
+                rb.drag = 0;
+            else if (grounded)
+                rb.drag = groundDrag;
+            else
+                rb.drag = 0;
+        }
     }
 
     private void FixedUpdate()
     {
-        MovePlayer();
+        if (!PauseMenu.isPaused)
+        {
+            MovePlayer();
+        }
     }
 
     private void MyInput()

@@ -59,37 +59,39 @@ public class WeaponController : MonoBehaviour
 
     void Update()
     {
-
-        if (Input.GetMouseButtonDown(0))
+        if (!PauseMenu.isPaused)
         {
-            if (CanAttack)
+            if (Input.GetMouseButtonDown(0))
             {
-                if (weapon == CurrWeapon.sword)
+                if (CanAttack)
                 {
-                    SwordAttack();
+                    if (weapon == CurrWeapon.sword)
+                    {
+                        SwordAttack();
+
+                    }
+
+
 
                 }
-
-                
-
             }
-        }
-        /*else if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            weapon = CurrWeapon.sword;
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            weapon = CurrWeapon.bow;
-        }*/
-        else if (Input.GetMouseButtonDown(1))
-        {
-            if (CanAttack)
+            /*else if (Input.GetKeyDown(KeyCode.Alpha1))
             {
-                if (weapon == CurrWeapon.sword)
+                weapon = CurrWeapon.sword;
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha2))
+            {
+                weapon = CurrWeapon.bow;
+            }*/
+            else if (Input.GetMouseButtonDown(1))
+            {
+                if (CanAttack)
                 {
-                    DashAttack();
+                    if (weapon == CurrWeapon.sword)
+                    {
+                        DashAttack();
 
+                    }
                 }
             }
         }
