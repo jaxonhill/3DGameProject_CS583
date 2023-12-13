@@ -6,9 +6,11 @@ using UnityEngine;
 
 public class WeaponController : MonoBehaviour
 {
+    public bool IsAttacking = false;
     public GameObject Sword, Bow;
     public bool CanAttack = true;
     public float SwordCooldown, BowCooldown = 1.0f;
+    public int swordDamage;
     public enum CurrWeapon
     {
         sword,
@@ -98,6 +100,7 @@ public class WeaponController : MonoBehaviour
     }
     public void SwordAttack()
     {
+        IsAttacking = true;
         CanAttack = false;
         Animator anim = Sword.GetComponent<Animator>();
         anim.SetTrigger("Attack");
@@ -105,6 +108,7 @@ public class WeaponController : MonoBehaviour
     }
     public void DashAttack()
     {
+        IsAttacking = true;
         CanAttack = false;
         Animator anim = Sword.GetComponent<Animator>();
         anim.SetTrigger("Dash");
@@ -112,6 +116,7 @@ public class WeaponController : MonoBehaviour
     }
     IEnumerator ResetAttackCooldown()
     {
+        StartCoroutine(ResetAttackBool());
         float AttackCooldown = 0;
         if (weapon == CurrWeapon.sword)
         {
@@ -123,6 +128,11 @@ public class WeaponController : MonoBehaviour
         }
         yield return new WaitForSeconds(AttackCooldown);
         CanAttack = true;
+    }
+    IEnumerator ResetAttackBool()
+    {
+        yield return new WaitForSeconds(1.0f);
+        IsAttacking = false;
     }
 
 
