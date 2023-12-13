@@ -1589,7 +1589,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1394870258618508246}
   m_LocalRotation: {x: -0, y: 0.70710677, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -9.806, y: 10.93, z: 0.79}
+  m_LocalPosition: {x: 0, y: 0.179, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1655,11 +1655,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a9b96270e44cd544ba4a7eff8fb439d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsAttacking: 0
   Sword: {fileID: 796746798890864485}
   Bow: {fileID: 0}
   CanAttack: 1
   SwordCooldown: 1
   BowCooldown: 1
+  swordDamage: 0
   weapon: 0
   m_ArrowPrefab: {fileID: 2098445799576652571, guid: d337c1a5b05a03145aab15ae27e81ec5, type: 3}
   m_GrabThreshold: 0.15
@@ -3256,7 +3258,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1831142158953437179}
   m_Layer: 0
-  m_Name: UIAndPlayerStuff
+  m_Name: FinalUIAndPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3457,7 +3459,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3145867631431805912}
   m_LocalRotation: {x: -0, y: 0.70710677, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -9.805982, y: 10.929999, z: 0.79000264}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3495,6 +3497,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfe570c7da0c6ff4e9f81210a2e87183, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsAttacking: 0
   walkSpeed: 8
   sprintSpeed: 12
   groundDrag: 2
@@ -3539,7 +3542,6 @@ MonoBehaviour:
   resetVel: 1
   dashCd: 1
   dashKey: 101
-  soundManager: {fileID: 2261677950726939493, guid: 36add48d44120b44d9a5d264938b5c69, type: 3}
 --- !u!136 &6701558282650358850
 CapsuleCollider:
   m_ObjectHideFlags: 0
