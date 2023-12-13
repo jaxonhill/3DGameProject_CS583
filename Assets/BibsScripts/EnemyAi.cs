@@ -41,6 +41,10 @@ public class EnemyAi : MonoBehaviour
         if (!playerInSightRange && !playerInAttackRange) Patroling();
         if (playerInSightRange && !playerInAttackRange) ChasePlayer();
         if (playerInAttackRange && playerInSightRange) AttackPlayer();
+        if(health <= 0)
+        {
+            DestroyEnemy();
+        }
         
     }
 
