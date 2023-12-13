@@ -11,6 +11,7 @@ public class CollisionDetection : MonoBehaviour
         if(other.tag == "Enemy" && wc.IsAttacking)
         {
             Debug.Log("Hit Enemy");
+            other.gameObject.GetComponent<EnemyAi>().TakeDamage(1);
         }
     }
 }
