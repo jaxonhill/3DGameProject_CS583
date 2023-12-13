@@ -5,14 +5,15 @@ using UnityEngine;
 public class EnemyDmg : MonoBehaviour
 {
     public int damage = 1;
+    public PlayerInfo playerInfo = null;
 
     void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
         {
             Debug.Log("Hit Player");
-            //StaticStats.Health--;
-            //PlayerInfo.UpdateHearts();
+            StaticStats.Health--;
+            playerInfo.UpdateHearts();
         }
     }
 }
