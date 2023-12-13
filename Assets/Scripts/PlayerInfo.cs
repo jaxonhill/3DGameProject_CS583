@@ -48,4 +48,16 @@ public class PlayerInfo : MonoBehaviour
             }
         }
     }
+
+    public void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Lava")
+        {
+            StaticStats.Health--;
+            if (StaticStats.Health != 0)
+            {
+                SceneManager.LoadScene("_First_Parkour");
+            }
+        }
+    }
 }
