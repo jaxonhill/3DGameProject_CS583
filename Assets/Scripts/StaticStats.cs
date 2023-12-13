@@ -1,6 +1,6 @@
 public static class StaticStats
 {
-    public static int Health = 3;
+    public static int Health = 15;
     public static Quest[] Quests = {
         new Quest("Go Through The First Rune"),
         new Quest("Parkour Out of the Room"),
