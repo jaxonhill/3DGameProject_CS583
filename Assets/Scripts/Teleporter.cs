@@ -11,6 +11,7 @@ public class Teleporter : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            StaticStats.currentQuestIndex++;
             SceneManager.LoadScene(sceneName);
         }
     }

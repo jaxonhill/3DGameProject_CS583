@@ -15,15 +15,12 @@ EditorBuildSettings:
     path: Assets/Scenes/_Questing_Area.unity
     guid: 636a516038ca2cf49a9e57b89b988f81
   - enabled: 1
-    path: Assets/Scenes/_Scene_01.unity
-    guid: 6d4a7df0403cfa24fb6611b1e983d7f7
-  - enabled: 1
-    path: Assets/Scenes/_Scene_02.unity
-    guid: 371fcdf145855644b9a885cf4f160c7c
-  - enabled: 1
     path: Assets/Scenes/_StartMenu.unity
     guid: f42ce9586534f70448b84897c3c04a67
   - enabled: 1
     path: Assets/Scenes/trial.unity
     guid: 3bb923b011e698f479c9ac0b142f2aaf
+  - enabled: 1
+    path: Assets/Scenes/_First_Parkour.unity
+    guid: 4db7191ab7deab543a14258543571199
   m_configObjects: {}
