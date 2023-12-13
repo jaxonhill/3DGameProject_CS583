@@ -130,7 +130,7 @@ MonoBehaviour:
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 512
-  health: 40
+  health: 2
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 5
   timeBetweenAttacks: 1.5
@@ -296,6 +296,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
+  playerInfo: {fileID: 0}
 --- !u!1001 &6232666389423470506
 PrefabInstance:
   m_ObjectHideFlags: 0

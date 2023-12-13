@@ -128,6 +128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
+  playerInfo: {fileID: 0}
 --- !u!1 &5446620786293543656
 GameObject:
   m_ObjectHideFlags: 0
@@ -258,7 +259,7 @@ MonoBehaviour:
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 512
-  health: 40
+  health: 10
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 5
   timeBetweenAttacks: 3
