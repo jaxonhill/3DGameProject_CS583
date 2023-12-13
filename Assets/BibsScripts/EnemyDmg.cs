@@ -13,6 +13,7 @@ public class EnemyDmg : MonoBehaviour
         {
             Debug.Log("Hit Player");
             StaticStats.Health--;
+            playerInfo = other.GetComponent<PlayerInfo>();
             playerInfo.UpdateHearts();
         }
     }
