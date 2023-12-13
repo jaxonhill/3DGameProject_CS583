@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+
+    public bool IsAttacking = false;
     [Header("Movement")]
     private float moveSpeed;
     public float walkSpeed;
