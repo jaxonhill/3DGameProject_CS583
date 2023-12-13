@@ -17,6 +17,9 @@ public class PlayerInfo : MonoBehaviour
         // Get a reference to the actual textmesh
         gt = questGO.GetComponent<TextMeshProUGUI>();
         SetQuestText();
+
+        // Always update hearts when new scene
+        UpdateHearts();
     }
 
     // Update is called once per frame
@@ -30,17 +33,19 @@ public class PlayerInfo : MonoBehaviour
         gt.text = StaticStats.Quests[StaticStats.currentQuestIndex].questTitle;
     }
 
-    void DecrementHealth()
+    public void UpdateHearts()
     {
-        // Game over is health == 1 because we are going to decrement to 0 anyway
-        if (StaticStats.Health == 1)
+        for (int i = 3; i > 0; i--)
         {
-            // Do Game Over
-            SceneManager.LoadScene("_StartMenu");
+            GameObject heartGO = GameObject.Find($"Heart{i}");
+            if (i > StaticStats.Health)
+            {
+                heartGO.SetActive(false);
+            }
+            else
+            {
+                heartGO.SetActive(true);
+            }
         }
-
-        GameObject heartImage = GameObject.Find($"Heart{StaticStats.Health}");
-        heartImage.SetActive(false);
-        StaticStats.Health--;
     }
 }
